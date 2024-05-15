@@ -1,21 +1,10 @@
 model_params = {
-    "SVR": {
-        'model__kernel': ['linear', 'poly', 'rbf', 'sigmoid', 'precomputed'] ,
+    # "SVR": {
+        # 'kernel': ['linear', 'poly', 'rbf', 'sigmoid', 'precomputed'] ,
         # 'C': [0.1, 1, 10],
         # 'epsilon': [0.1, 0.2, 0.5],
         # 'gamma': ['scale', 'auto']
-    },
-    #     kernel: ((...) -> Any) | Literal['linear', 'poly', 'rbf', 'sigmoid', 'precomputed'] = "rbf",
-    # degree: Int = 3,
-    # gamma: float | Literal['scale', 'auto'] = "scale",
-    # coef0: Float = 0,
-    # tol: Float = 0.001,
-    # C: Float = 1,
-    # epsilon: Float = 0.1,
-    # shrinking: bool = True,
-    # cache_size: Float = 200,
-    # verbose: bool = False,
-    # max_iter: Int = ...
+    # },
 
     "Ridge Regression": {
         'alpha': [0.1, 0.5, 1.0],
@@ -30,8 +19,12 @@ model_params = {
     "Lasso Regression": {
         'alpha': [0.1, 0.5, 1.0],
         'fit_intercept': [True, False],
-        'normalize': [True, False],
-        'selection': ['cyclic', 'random']
+        'precompute': [True, False],
+        'copy_X': [True, False],
+        'warm_start': [True, False],
+        'positive': [True, False],
+        'selection': ['cyclic', 'random'],
+        'random_state': [42, 2, 88]
     },
 
     "MLP Regressor": {
